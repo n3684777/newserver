@@ -1,0 +1,92 @@
+uttycty,100,163,4	script	稀有材料購買商	112,{
+	disable_items;
+	end;
+OnInit:
+	setnpcicon getnpcid(0),1026,"稀有材料購買";
+	waitingroom "★ 稀有材料 ★",0;
+	.@p = 300000000;
+	.@meow = 15;
+	tradertype(NST_EXPANDED_BARTER);
+	
+	sellitem(910132,100000000,-1);      //1E支票
+
+	sellitem(910132,0,-1);      //1E支票
+	sellitemcurrency(969,50);
+    endsellitem();
+	
+	sellitem(1001174,.@p*3,-1);      //心臟
+	sellitemcurrency(6909,30);
+	sellitemcurrency(6417,100);
+	sellitemcurrency(4610,1);
+    endsellitem();
+	sellitem(1000620,.@p*3,-1);      //能量石
+	sellitemcurrency(4602,1);
+    endsellitem();
+	sellitem(1001255,.@p*3,-1);      //深紅魔術之鑰
+	sellitemcurrency(940048,200);
+	sellitemcurrency(940052,200);
+	sellitemcurrency(4625,3);
+    endsellitem();
+	sellitem(1001557,.@p*3,-1);      //超新星的祝福
+	sellitemcurrency(910132,999);
+	sellitemcurrency(1001174,999);
+    endsellitem();
+	sellitem(1001558,.@p*3,-1);      //魔神殿之息
+	sellitemcurrency(910132,999);
+	sellitemcurrency(1001174,999);
+    endsellitem();
+	sellitem(1001573,.@p*3,-1);      //深紅魔術花瓣
+	sellitemcurrency(910132,999);
+	sellitemcurrency(1001174,999);
+    endsellitem();
+	sellitem(910134,0,-1);      //MVP點數(300點)
+	sellitemcurrency(910136,300);
+    endsellitem();
+	sellitem(910137,0,-1);      //MVP點數(500點)
+	sellitemcurrency(910136,500);
+    endsellitem();
+	sellitem(910138,0,-1);      //MVP點數(1000點)
+	sellitemcurrency(910136,1000);
+    endsellitem();
+
+	sellitem(4610,0,-1);      //莎拉卡片
+	sellitemcurrency(940025,200);
+    endsellitem();
+	sellitem(900141,0,-1);      //參宿四名片
+	sellitemcurrency(940048,200);
+    endsellitem();
+	sellitem(27106,0,-1);      //覺醒貝爾卡片
+	sellitemcurrency(940049,200);
+    endsellitem();
+
+	sellitem(950003,0,-1);      //忽克連超高級影子精煉鎚12
+	sellitemcurrency(950002,5);
+    endsellitem();
+	sellitem(950004,0,-1);      //忽克連超高級影子精煉鎚13
+	sellitemcurrency(950002,10);
+    endsellitem();
+	sellitem(950005,0,-1);      //忽克連超高級影子精煉鎚14
+	sellitemcurrency(950002,15);
+    endsellitem();
+	sellitem(950006,0,-1);      //忽克連超高級影子精煉鎚15
+	sellitemcurrency(950002,20);
+    endsellitem();
+	sellitem(950007,0,-1);      //忽克連超高級影子精煉鎚16
+	sellitemcurrency(950002,30);
+    endsellitem();
+	sellitem(950008,0,-1);      //忽克連超高級影子精煉鎚17
+	sellitemcurrency(950002,45);
+    endsellitem();
+	sellitem(950009,0,-1);      //忽克連超高級影子精煉鎚18
+	sellitemcurrency(950002,60);
+    endsellitem();
+	sellitem(950010,0,-1);      //忽克連超高級影子精煉鎚19
+	sellitemcurrency(950002,80);
+    endsellitem();
+	sellitem(950011,0,-1);      //忽克連超高級影子精煉鎚20
+	sellitemcurrency(950002,100);
+    endsellitem();
+	
+OnBuyItem:
+end;
+}

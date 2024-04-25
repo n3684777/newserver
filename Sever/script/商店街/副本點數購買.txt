@@ -1,0 +1,39 @@
+uttycty,110,79,4	script	副本點數購買	910,{
+	disable_items;
+	end;
+OnInit:
+	setnpcicon getnpcid(0),1026,"副本點數購買";
+	waitingroom "★ 副本點數購買 ★",0;
+	.@p = 0;
+	.@c = 10000000; // 便宜貨
+    .@cash = 930000; //副本點數id
+	.@meow = 15;
+	tradertype(NST_EXPANDED_BARTER);
+	
+	sellitem(24683,.@p,-1);	//影子經驗值倍增神盾
+	sellitemcurrency(.@cash,100);
+    endsellitem(); 
+	sellitem(2110000,.@p,-1);	//影子掉寶率倍增神盾
+	sellitemcurrency(.@cash,1000);
+	sellitemcurrency(910132,100);
+    endsellitem(); 
+	sellitem(6909,.@p,-1);	//喵楊桃果實
+	sellitemcurrency(.@cash,5);
+    endsellitem(); 
+	sellitem(900500,.@p,-1);	//武器物理附魔使用券
+	sellitemcurrency(.@cash,10);
+    endsellitem(); 
+	sellitem(900501,.@p,-1);	//武器魔法附魔使用券
+	sellitemcurrency(.@cash,10);
+    endsellitem(); 
+	sellitem(900502,.@p,-1);	//飾品頭飾附魔使用券
+	sellitemcurrency(.@cash,10);
+    endsellitem(); 
+
+	
+OnBuyItem:
+end;
+}
+
+
+

@@ -1,0 +1,42 @@
+uttycty,110,163,4	script	轉蛋兌換	112,{
+	disable_items;
+	end;
+OnInit:
+	setnpcicon getnpcid(0),1026,"轉蛋兌換";
+	waitingroom "★ 轉蛋兌換 ★",0;
+
+	tradertype(NST_EXPANDED_BARTER);
+	
+    sellitem(920001,0,-1); //帝國轉蛋
+	sellitemcurrency(950017,1);
+    endsellitem();
+    sellitem(920002,0,-1); //王牌轉蛋
+	sellitemcurrency(950017,1);
+    endsellitem();
+	sellitem(920005,0,-1); //天使轉蛋
+	sellitemcurrency(950017,1);
+    endsellitem();
+	sellitem(920010,0,-1); //星願轉蛋
+	sellitemcurrency(950017,1);
+    endsellitem();
+
+	//        兌換券      //
+
+    sellitem(950017,0,-1); 
+	sellitemcurrency(920001,1); //帝國轉蛋
+    endsellitem();
+    sellitem(950017,0,-1); 
+	sellitemcurrency(920002,1); //王牌轉蛋
+    endsellitem();
+	sellitem(950017,0,-1); 
+	sellitemcurrency(920005,1); //天使轉蛋
+    endsellitem();
+	sellitem(950017,0,-1); 
+	sellitemcurrency(920010,1); //星願轉蛋
+    endsellitem();
+	
+
+
+OnBuyItem:
+end;
+}
